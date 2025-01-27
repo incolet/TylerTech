@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TylerTechnologies.Api", "TylerTechnologies.Api\TylerTechnologies.Api.csproj", "{0A962793-E3D2-4DC8-BC3E-A2C2231EF6FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DF30F63F-BEC3-4C67-9349-A67DCE87B817}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TylerTechnologiesTest", "TylerTechnologiesTest\TylerTechnologiesTest.csproj", "{F9707E5E-C6CB-45BC-8E5F-1FCC28BFCBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TylerTechnologies.Infrastructure", "TylerTechnologies.Infrastructure\TylerTechnologies.Infrastructure.csproj", "{5FF902C8-C543-42D9-AB47-B76283761E85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TylerTechnologies.Core", "TylerTechnologies.Core\TylerTechnologies.Core.csproj", "{B19367AA-830F-4842-A6EC-6003F5A26700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A962793-E3D2-4DC8-BC3E-A2C2231EF6FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A962793-E3D2-4DC8-BC3E-A2C2231EF6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A962793-E3D2-4DC8-BC3E-A2C2231EF6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A962793-E3D2-4DC8-BC3E-A2C2231EF6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9707E5E-C6CB-45BC-8E5F-1FCC28BFCBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9707E5E-C6CB-45BC-8E5F-1FCC28BFCBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9707E5E-C6CB-45BC-8E5F-1FCC28BFCBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9707E5E-C6CB-45BC-8E5F-1FCC28BFCBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF902C8-C543-42D9-AB47-B76283761E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF902C8-C543-42D9-AB47-B76283761E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF902C8-C543-42D9-AB47-B76283761E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF902C8-C543-42D9-AB47-B76283761E85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B19367AA-830F-4842-A6EC-6003F5A26700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19367AA-830F-4842-A6EC-6003F5A26700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19367AA-830F-4842-A6EC-6003F5A26700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19367AA-830F-4842-A6EC-6003F5A26700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

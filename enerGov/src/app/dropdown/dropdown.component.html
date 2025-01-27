@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <select
+    id="dropdown"
+    class="dropdown-select"
+    (change)="onSelectChange($event)"
+  >
+    <option value="" disabled selected>Select an option</option>
+    <option *ngFor="let option of items" [value]="option.id">
+      <span>
+      {{ option.firstName }} {{ option.lastName }}
+    </span>
+    </option>
+  </select>
+</div>

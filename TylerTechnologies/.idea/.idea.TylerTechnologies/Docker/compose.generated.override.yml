@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  api:
+    build:
+      context: "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies"
+      dockerfile: "TylerTechnologies.Api/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/TylerTechnologies.Api.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "tylertechnologies:dev"
+    ports: []
+    volumes:
+    - "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api:/app:rw"
+    - "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies:/src:rw"
+    - "/Users/incolet/.nuget/packages:/home/app/.nuget/packages"
+    working_dir: "/app"

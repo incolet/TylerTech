@@ -1,0 +1,12 @@
+<main class="main">
+  <div class="title">
+    <h4>S-Squared Enterprises</h4>
+  </div>
+  <div class="content">
+    <app-dropdown [items]="employeesList" (selectedItem)="handleSelectedItem($event)" ></app-dropdown>
+    <app-table [employees]="employeeListUnderManager"></app-table>
+    <button class="add-employer-btn" (click)="goToAddEmployer()">
+      Add Employer
+    </button>
+  </div>
+</main>

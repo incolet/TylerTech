@@ -1,0 +1,30 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.dropdown-label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.dropdown-select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdown-select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}

@@ -1,0 +1,14 @@
+<div class="checkbox-container">
+  @for (item of items; track item.name) {
+  <div class="checkbox-item">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="item.checked"
+        (change)="toggleCheckbox(item)"
+      />
+      {{ item.name }}
+    </label>
+  </div>
+  }
+</div>

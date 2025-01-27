@@ -1,0 +1,22 @@
+<div class="table-container">
+  <table class="employee-table">
+    <thead>
+      <tr>
+        <th>Employer ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.employeeNumber }}</td>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+      </tr>
+      
+      <tr *ngIf="employees.length === 0">
+        <td colspan="3" class="no-records">No records found</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

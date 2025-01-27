@@ -1,0 +1,1119 @@
+2025-01-27 12:49:13.338 -05:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 12:49:13.399 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 12:49:13.405 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 12:49:13.408 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 12:49:13.530 -05:00 [INF] Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-27 12:49:13.552 -05:00 [INF] No migrations were applied. The database is already up to date.
+2025-01-27 12:49:13.798 -05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 12:49:13.822 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 12:49:14.413 -05:00 [INF] Executed DbCommand (562ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName]
+FROM [Roles] AS [r]
+2025-01-27 12:49:14.870 -05:00 [INF] Executed DbCommand (261ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 7), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = Guid), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 7), @p11='?' (Size = 50), @p12='?' (Size = 50), @p13='?' (DbType = Guid), @p14='?' (DbType = Guid), @p15='?' (DbType = DateTimeOffset), @p16='?' (Size = 7), @p17='?' (Size = 50), @p18='?' (Size = 50), @p19='?' (DbType = Guid), @p20='?' (DbType = Guid), @p21='?' (DbType = Int32), @p22='?' (DbType = Guid), @p23='?' (DbType = Int32), @p24='?' (DbType = Guid), @p25='?' (DbType = DateTimeOffset), @p26='?' (Size = 7), @p27='?' (Size = 50), @p28='?' (Size = 50), @p29='?' (DbType = Guid), @p30='?' (DbType = Guid), @p31='?' (DbType = DateTimeOffset), @p32='?' (Size = 7), @p33='?' (Size = 50), @p34='?' (Size = 50), @p35='?' (DbType = Guid), @p36='?' (DbType = Guid), @p37='?' (DbType = DateTimeOffset), @p38='?' (Size = 7), @p39='?' (Size = 50), @p40='?' (Size = 50), @p41='?' (DbType = Guid), @p42='?' (DbType = Guid), @p43='?' (DbType = DateTimeOffset), @p44='?' (Size = 7), @p45='?' (Size = 50), @p46='?' (Size = 50), @p47='?' (DbType = Guid), @p48='?' (DbType = Guid), @p49='?' (DbType = DateTimeOffset), @p50='?' (Size = 7), @p51='?' (Size = 50), @p52='?' (Size = 50), @p53='?' (DbType = Guid), @p54='?' (DbType = Guid), @p55='?' (DbType = DateTimeOffset), @p56='?' (Size = 7), @p57='?' (Size = 50), @p58='?' (Size = 50), @p59='?' (DbType = Guid), @p60='?' (DbType = Guid), @p61='?' (DbType = DateTimeOffset), @p62='?' (Size = 7), @p63='?' (Size = 50), @p64='?' (Size = 50), @p65='?' (DbType = Guid), @p66='?' (DbType = Guid), @p67='?' (DbType = Int32), @p68='?' (DbType = Guid), @p69='?' (DbType = Int32), @p70='?' (DbType = Guid), @p71='?' (DbType = Int32), @p72='?' (DbType = Guid), @p73='?' (DbType = Int32), @p74='?' (DbType = Guid), @p75='?' (DbType = Int32), @p76='?' (DbType = Guid), @p77='?' (DbType = Int32), @p78='?' (DbType = Guid), @p79='?' (DbType = Int32), @p80='?' (DbType = Guid), @p81='?' (DbType = Int32), @p82='?' (DbType = Guid), @p83='?' (DbType = Int32), @p84='?' (DbType = Guid), @p85='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([Id], [DateCreated], [EmployeeNumber], [FirstName], [LastName], [ManagerId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+INSERT INTO [EmployeeRole] ([EmployeeId], [RoleId])
+VALUES (@p6, @p7);
+INSERT INTO [Employees] ([Id], [DateCreated], [EmployeeNumber], [FirstName], [LastName], [ManagerId])
+VALUES (@p8, @p9, @p10, @p11, @p12, @p13),
+(@p14, @p15, @p16, @p17, @p18, @p19);
+INSERT INTO [EmployeeRole] ([EmployeeId], [RoleId])
+VALUES (@p20, @p21),
+(@p22, @p23);
+INSERT INTO [Employees] ([Id], [DateCreated], [EmployeeNumber], [FirstName], [LastName], [ManagerId])
+VALUES (@p24, @p25, @p26, @p27, @p28, @p29),
+(@p30, @p31, @p32, @p33, @p34, @p35),
+(@p36, @p37, @p38, @p39, @p40, @p41),
+(@p42, @p43, @p44, @p45, @p46, @p47),
+(@p48, @p49, @p50, @p51, @p52, @p53),
+(@p54, @p55, @p56, @p57, @p58, @p59),
+(@p60, @p61, @p62, @p63, @p64, @p65);
+INSERT INTO [EmployeeRole] ([EmployeeId], [RoleId])
+VALUES (@p66, @p67),
+(@p68, @p69),
+(@p70, @p71),
+(@p72, @p73),
+(@p74, @p75),
+(@p76, @p77),
+(@p78, @p79),
+(@p80, @p81),
+(@p82, @p83),
+(@p84, @p85);
+2025-01-27 12:49:14.888 -05:00 [INF] Starting application
+2025-01-27 12:49:14.940 -05:00 [WRN] Overriding address(es) 'http://localhost:5080'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-01-27 12:49:14.945 -05:00 [INF] Now listening on: http://0.0.0.0:80
+2025-01-27 12:49:14.945 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 12:49:14.945 -05:00 [INF] Hosting environment: Development
+2025-01-27 12:49:14.945 -05:00 [INF] Content root path: /Users/incolet/Documents/Projects/TylerTechnologies/TylerTechnologies.Api
+2025-01-27 12:52:29.016 -05:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 12:52:29.144 -05:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 12:52:29.149 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 12:52:29.155 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 12:52:29.824 -05:00 [INF] Executed DbCommand (653ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-27 12:52:29.852 -05:00 [INF] No migrations were applied. The database is already up to date.
+2025-01-27 12:52:30.258 -05:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 12:52:30.906 -05:00 [INF] Executed DbCommand (626ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 12:52:31.018 -05:00 [INF] Starting application
+2025-01-27 12:52:31.190 -05:00 [WRN] Overriding address(es) 'http://localhost:5080'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-01-27 12:52:31.202 -05:00 [INF] Now listening on: http://0.0.0.0:80
+2025-01-27 12:52:31.202 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 12:52:31.202 -05:00 [INF] Hosting environment: Development
+2025-01-27 12:52:31.202 -05:00 [INF] Content root path: /Users/incolet/Documents/Projects/TylerTechnologies/TylerTechnologies.Api
+2025-01-27 12:54:16.949 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/swagger/index.html - null null
+2025-01-27 12:54:17.229 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/swagger/index.html - 200 null text/html;charset=utf-8 285.5913ms
+2025-01-27 12:54:17.324 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/swagger/swagger-ui-standalone-preset.js - null null
+2025-01-27 12:54:17.324 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/swagger/swagger-ui-bundle.js - null null
+2025-01-27 12:54:17.326 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/swagger/swagger-ui.css - null null
+2025-01-27 12:54:17.646 -05:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-01-27 12:54:17.646 -05:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-01-27 12:54:17.647 -05:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-01-27 12:54:17.649 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/swagger/swagger-ui.css - 200 143943 text/css 323.7017ms
+2025-01-27 12:54:17.649 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 325.1277ms
+2025-01-27 12:54:17.649 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 325.1033ms
+2025-01-27 12:54:17.773 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/swagger/v1/swagger.json - null null
+2025-01-27 12:54:17.792 -05:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2025-01-27 12:54:17.816 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/swagger/favicon-32x32.png - null null
+2025-01-27 12:54:17.816 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-01-27 12:54:17.816 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/swagger/favicon-32x32.png - 200 628 image/png 0.5352ms
+2025-01-27 12:54:17.896 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 122.2706ms
+2025-01-27 12:54:23.626 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/roles - null null
+2025-01-27 12:54:23.646 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-01-27 12:54:23.665 -05:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 12:54:23.802 -05:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 12:54:23.817 -05:00 [INF] Setting HTTP status code 200.
+2025-01-27 12:54:23.820 -05:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 12:54:23.828 -05:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 12:54:23.832 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/roles - 200 null application/json; charset=utf-8 205.741ms
+2025-01-27 12:54:32.811 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost/api/v1/employees - null null
+2025-01-27 12:54:32.817 -05:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 12:54:32.891 -05:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 12:54:32.893 -05:00 [INF] Setting HTTP status code 200.
+2025-01-27 12:54:32.894 -05:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 12:54:32.896 -05:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 12:54:32.897 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost/api/v1/employees - 200 null application/json; charset=utf-8 86.3819ms
+2025-01-27 18:03:25.950 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 18:03:25.983 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 18:03:25.985 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 18:03:25.986 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 18:03:26.026 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-27 18:03:26.033 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-01-27 18:03:26.144 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 18:03:26.169 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 18:03:26.175 +00:00 [INF] Starting application
+2025-01-27 18:03:26.194 +00:00 [WRN] Overriding address(es) 'http://*:8080'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-01-27 18:03:26.198 +00:00 [INF] Now listening on: http://0.0.0.0:80
+2025-01-27 18:03:26.198 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 18:03:26.198 +00:00 [INF] Hosting environment: Development
+2025-01-27 18:03:26.198 +00:00 [INF] Content root path: /app
+2025-01-27 18:04:24.776 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - null null
+2025-01-27 18:04:25.063 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:04:25.081 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-01-27 18:04:25.096 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - 404 0 null 313.1166ms
+2025-01-27 18:04:25.104 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/api/v1/employees/managers, Response status code: 404
+2025-01-27 18:06:03.814 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - null null
+2025-01-27 18:06:03.840 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:06:03.846 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - 404 0 null 35.1803ms
+2025-01-27 18:06:03.849 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/api/v1/employees/managers, Response status code: 404
+2025-01-27 18:06:56.843 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - null null
+2025-01-27 18:06:56.863 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:06:56.871 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - 404 0 null 30.4466ms
+2025-01-27 18:06:56.875 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/api/v1/employees/managers, Response status code: 404
+2025-01-27 18:07:45.444 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/ - null null
+2025-01-27 18:07:45.465 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/ - 404 0 null 27.8185ms
+2025-01-27 18:07:45.465 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/, Response status code: 404
+2025-01-27 18:08:35.655 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - null null
+2025-01-27 18:08:35.663 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:08:35.666 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - 404 0 null 11.1806ms
+2025-01-27 18:08:35.666 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/api/v1/employees/managers, Response status code: 404
+2025-01-27 18:08:45.763 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - null null
+2025-01-27 18:08:45.790 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:08:45.807 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees/managers - 404 0 null 45.9916ms
+2025-01-27 18:08:45.809 +00:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/api/v1/employees/managers, Response status code: 404
+2025-01-27 18:11:45.490 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:11:45.700 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:11:45.745 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:11:46.255 +00:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:11:46.265 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:11:46.277 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:11:46.302 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:11:46.309 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 835.8335ms
+2025-01-27 18:11:46.310 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:11:46.314 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:11:46.314 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:11:46.323 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:11:46.324 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:11:46.324 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:11:46.324 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:11:46.325 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 14.791ms
+2025-01-27 18:12:08.560 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=undefined - null null
+2025-01-27 18:12:08.581 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:12:08.581 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:12:08.594 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:12:08.602 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Nullable<Guid> ManagerId" from "undefined".
+   at lambda_method10(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 18:12:08.631 +00:00 [ERR] An unhandled exception occurred
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Nullable<Guid> ManagerId" from "undefined".
+   at lambda_method10(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 18:12:08.644 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=undefined - 500 null application/json; charset=utf-8 85.928ms
+2025-01-27 18:12:18.527 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:12:18.546 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:12:18.551 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:12:18.621 +00:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:12:18.623 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:12:18.623 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:12:18.625 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:12:18.626 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 98.9356ms
+2025-01-27 18:12:21.350 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=undefined - null null
+2025-01-27 18:12:21.355 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:12:21.356 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:12:21.357 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:12:21.357 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Nullable<Guid> ManagerId" from "undefined".
+   at lambda_method10(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 18:12:21.359 +00:00 [ERR] An unhandled exception occurred
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Nullable<Guid> ManagerId" from "undefined".
+   at lambda_method10(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 18:12:21.359 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=undefined - 500 null application/json; charset=utf-8 9.448ms
+2025-01-27 18:13:08.830 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:13:08.873 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:13:08.882 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:13:08.931 +00:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:13:08.932 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:13:08.935 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:13:08.938 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:13:08.939 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 111.1197ms
+2025-01-27 18:13:08.963 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:13:08.964 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:13:08.966 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:13:08.979 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:13:08.982 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:13:08.982 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:13:08.983 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:13:08.985 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 21.6927ms
+2025-01-27 18:14:24.728 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:14:24.749 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:14:24.789 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:14:24.827 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:14:24.831 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:14:24.831 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:14:24.832 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:14:24.833 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 105.8467ms
+2025-01-27 18:14:24.851 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:14:24.852 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:14:24.856 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:14:24.862 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:14:24.866 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:14:24.867 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:14:24.872 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:14:24.873 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 22.0152ms
+2025-01-27 18:15:37.202 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:15:37.226 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:15:37.228 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:15:37.276 +00:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:15:37.277 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:15:37.277 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:15:37.279 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:15:37.280 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 79.0925ms
+2025-01-27 18:15:39.952 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=undefined - null null
+2025-01-27 18:15:39.958 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:15:39.960 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:15:39.964 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:15:39.966 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Nullable<Guid> ManagerId" from "undefined".
+   at lambda_method10(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 18:15:39.979 +00:00 [ERR] An unhandled exception occurred
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Nullable<Guid> ManagerId" from "undefined".
+   at lambda_method10(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.Invoke(HttpContext context)
+2025-01-27 18:15:39.982 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=undefined - 500 null application/json; charset=utf-8 29.7892ms
+2025-01-27 18:16:11.704 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:16:11.712 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:16:11.715 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:16:11.739 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:16:11.740 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:16:11.741 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:16:11.742 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:16:11.742 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 38.2849ms
+2025-01-27 18:20:27.809 +00:00 [INF] Application is shutting down...
+2025-01-27 18:20:31.361 +00:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 18:20:31.398 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 18:20:31.402 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 18:20:31.403 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 18:20:31.444 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-27 18:20:31.451 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-01-27 18:20:31.580 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 18:20:31.602 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 18:20:31.607 +00:00 [INF] Starting application
+2025-01-27 18:20:31.626 +00:00 [WRN] Overriding address(es) 'http://*:8080'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-01-27 18:20:31.632 +00:00 [INF] Now listening on: http://0.0.0.0:80
+2025-01-27 18:20:31.632 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 18:20:31.632 +00:00 [INF] Hosting environment: Development
+2025-01-27 18:20:31.632 +00:00 [INF] Content root path: /app
+2025-01-27 18:20:39.995 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:20:40.147 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:20:40.156 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-01-27 18:20:40.157 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:20:40.272 +00:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:20:40.280 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:20:40.283 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:20:40.293 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:20:40.297 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 308.0007ms
+2025-01-27 18:20:47.143 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 18:20:47.161 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:20:47.163 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:20:47.353 +00:00 [INF] Executed DbCommand (153ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 18:20:47.354 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:20:47.354 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:20:47.355 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:20:47.355 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 213.2045ms
+2025-01-27 18:20:50.794 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 18:20:50.794 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:20:50.798 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:20:50.800 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:20:50.803 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 18:20:50.803 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:20:50.831 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:20:50.832 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:20:50.833 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:20:50.834 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:20:50.834 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 41.5515ms
+2025-01-27 18:20:50.891 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 18:20:50.892 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:20:50.895 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:20:50.897 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 18:20:50.897 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 104.4175ms
+2025-01-27 18:21:27.993 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:21:28.005 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:21:28.013 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - 204 null null 25.0423ms
+2025-01-27 18:21:28.022 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/v1/employees - application/json 135
+2025-01-27 18:21:28.024 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:21:28.024 +00:00 [INF] Executing endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 18:21:28.280 +00:00 [INF] Executed DbCommand (143ms) [Parameters=[@__roleIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[Id] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roleIds_0) WITH ([value] int '$') AS [r0]
+)
+2025-01-27 18:21:28.349 +00:00 [INF] Executed DbCommand (45ms) [Parameters=[@__addEmployeeDto_EmployeeNumber_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[DateCreated], [e].[EmployeeNumber], [e].[FirstName], [e].[LastName], [e].[ManagerId]
+FROM [Employees] AS [e]
+WHERE [e].[EmployeeNumber] = @__addEmployeeDto_EmployeeNumber_0
+2025-01-27 18:21:28.364 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[@__addEmployeeDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[DateCreated], [e].[EmployeeNumber], [e].[FirstName], [e].[LastName], [e].[ManagerId]
+FROM [Employees] AS [e]
+WHERE [e].[Id] = @__addEmployeeDto_ManagerId_0
+2025-01-27 18:21:28.536 +00:00 [INF] Executed DbCommand (75ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 7), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([Id], [DateCreated], [EmployeeNumber], [FirstName], [LastName], [ManagerId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+INSERT INTO [EmployeeRole] ([EmployeeId], [RoleId])
+VALUES (@p6, @p7);
+2025-01-27 18:21:28.551 +00:00 [INF] Setting HTTP status code 201.
+2025-01-27 18:21:28.553 +00:00 [INF] Writing value of type 'Employee' as Json.
+2025-01-27 18:21:28.556 +00:00 [INF] Executed endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 18:21:28.556 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/v1/employees - 201 null application/json; charset=utf-8 534.081ms
+2025-01-27 18:21:28.596 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 18:21:28.597 +00:00 [INF] CORS policy execution successful.
+2025-01-27 18:21:28.598 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:21:28.613 +00:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 18:21:28.613 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 18:21:28.613 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 18:21:28.614 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 18:21:28.614 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 18.0037ms
+2025-01-27 20:07:41.763 +00:00 [INF] Application is shutting down...
+2025-01-27 20:07:44.687 +00:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 20:07:44.750 +00:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 20:07:44.753 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-01-27 20:07:44.755 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-01-27 20:07:44.852 +00:00 [INF] Executed DbCommand (89ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-01-27 20:07:44.860 +00:00 [INF] No migrations were applied. The database is already up to date.
+2025-01-27 20:07:44.978 +00:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Roles] AS [r]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 20:07:44.989 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-01-27 20:07:44.999 +00:00 [INF] Starting application
+2025-01-27 20:07:45.019 +00:00 [WRN] Overriding address(es) 'http://*:8080'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-01-27 20:07:45.023 +00:00 [INF] Now listening on: http://0.0.0.0:80
+2025-01-27 20:07:45.023 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-27 20:07:45.023 +00:00 [INF] Hosting environment: Development
+2025-01-27 20:07:45.023 +00:00 [INF] Content root path: /app
+2025-01-27 21:04:40.949 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:04:41.293 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:04:41.320 +00:00 [WRN] Failed to determine the https port for redirect.
+2025-01-27 21:04:41.322 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:04:42.046 +00:00 [INF] Executed DbCommand (170ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:04:42.055 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:04:42.060 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:04:42.073 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:04:42.078 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 1141.8022ms
+2025-01-27 21:04:53.070 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 21:04:53.086 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:04:53.088 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:04:53.286 +00:00 [INF] Executed DbCommand (122ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:04:53.287 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:04:53.287 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:04:53.288 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:04:53.289 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 220.1076ms
+2025-01-27 21:05:39.360 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - null null
+2025-01-27 21:05:39.373 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:05:39.376 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:39.424 +00:00 [INF] Executed DbCommand (26ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:05:39.424 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:05:39.425 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:05:39.425 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:39.426 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - 200 null application/json; charset=utf-8 66.1265ms
+2025-01-27 21:05:41.562 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=527725f9-ba13-44c5-5ec9-08dd3eff6aaf - null null
+2025-01-27 21:05:41.563 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:05:41.563 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:41.571 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:05:41.572 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:05:41.572 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:05:41.572 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:41.573 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=527725f9-ba13-44c5-5ec9-08dd3eff6aaf - 200 null application/json; charset=utf-8 11.1505ms
+2025-01-27 21:05:50.678 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=7f449b04-0cf6-4d50-c3c3-08dd3efaea01 - null null
+2025-01-27 21:05:50.684 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:05:50.685 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:50.709 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:05:50.710 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:05:50.710 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:05:50.711 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:50.711 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=7f449b04-0cf6-4d50-c3c3-08dd3efaea01 - 200 null application/json; charset=utf-8 35.1512ms
+2025-01-27 21:05:52.740 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - null null
+2025-01-27 21:05:52.740 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:05:52.741 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:52.748 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:05:52.749 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:05:52.749 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:05:52.750 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:52.750 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - 200 null application/json; charset=utf-8 10.3294ms
+2025-01-27 21:05:54.812 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=303d014e-440a-4e93-b853-45ec86220452 - null null
+2025-01-27 21:05:54.814 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:05:54.815 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:54.824 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:05:54.825 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:05:54.825 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:05:54.825 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:05:54.826 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=303d014e-440a-4e93-b853-45ec86220452 - 200 null application/json; charset=utf-8 15.8222ms
+2025-01-27 21:29:56.059 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:29:56.123 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:29:56.131 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:29:56.614 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:29:56.616 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:29:56.616 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:29:56.620 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:29:56.622 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 572.0931ms
+2025-01-27 21:30:02.416 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=420ef2db-3348-448a-c3c7-08dd3efaea01 - null null
+2025-01-27 21:30:02.419 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:30:02.421 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:02.450 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:30:02.451 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:30:02.451 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:30:02.452 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:02.452 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=420ef2db-3348-448a-c3c7-08dd3efaea01 - 200 null application/json; charset=utf-8 36.7379ms
+2025-01-27 21:30:04.704 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 21:30:04.709 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:30:04.710 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:04.719 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:30:04.720 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:30:04.720 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:30:04.721 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:04.722 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 17.9596ms
+2025-01-27 21:30:06.899 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=303d014e-440a-4e93-b853-45ec86220452 - null null
+2025-01-27 21:30:06.914 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:30:06.916 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:06.939 +00:00 [INF] Executed DbCommand (8ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:30:06.942 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:30:06.942 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:30:06.944 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:06.945 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=303d014e-440a-4e93-b853-45ec86220452 - 200 null application/json; charset=utf-8 45.7052ms
+2025-01-27 21:30:28.185 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:30:28.197 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:30:28.201 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:28.233 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:30:28.235 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:30:28.235 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:30:28.235 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:30:28.236 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 54.2377ms
+2025-01-27 21:31:06.318 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:31:06.328 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:31:06.329 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:06.349 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:31:06.351 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:31:06.351 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:31:06.352 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:06.353 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 34.7258ms
+2025-01-27 21:31:07.885 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:31:07.886 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:31:07.889 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:07.896 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:31:07.896 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:31:07.896 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:31:07.896 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:07.897 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 11.8403ms
+2025-01-27 21:31:11.437 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 21:31:11.438 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:31:11.439 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:11.452 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:31:11.453 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:31:11.453 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:31:11.453 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:11.454 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 16.8963ms
+2025-01-27 21:31:20.407 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - null null
+2025-01-27 21:31:20.413 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:31:20.415 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:20.447 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 21:31:20.448 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:31:20.448 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:31:20.449 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:31:20.449 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - 200 null application/json; charset=utf-8 42.0881ms
+2025-01-27 21:34:54.138 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:34:54.147 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:34:54.149 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:34:54.215 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:34:54.216 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:34:54.216 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:34:54.218 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:34:54.221 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 84.8459ms
+2025-01-27 21:41:30.925 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:41:30.933 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:30.934 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:41:31.192 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:41:31.192 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:41:31.193 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:41:31.194 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:41:31.194 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 269.088ms
+2025-01-27 21:41:32.253 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 21:41:32.267 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:41:32.268 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:32.268 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:32.269 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 21:41:32.269 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:41:32.278 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:41:32.280 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:41:32.280 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:41:32.282 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:41:32.283 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 15.0614ms
+2025-01-27 21:41:32.376 +00:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 21:41:32.378 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:41:32.391 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:41:32.396 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 21:41:32.396 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 143.3772ms
+2025-01-27 21:41:35.207 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:41:35.213 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:35.227 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - 204 null null 20.2404ms
+2025-01-27 21:41:35.238 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/v1/employees - application/json 61
+2025-01-27 21:41:35.239 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:35.239 +00:00 [INF] Executing endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 21:41:35.326 +00:00 [INF] Setting HTTP status code 400.
+2025-01-27 21:41:35.348 +00:00 [INF] Executed endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 21:41:35.348 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/v1/employees - 400 null application/problem+json 110.9212ms
+2025-01-27 21:41:42.293 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:41:42.304 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:42.308 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - 204 null null 15.5915ms
+2025-01-27 21:41:42.311 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/v1/employees - application/json 61
+2025-01-27 21:41:42.314 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:41:42.314 +00:00 [INF] Executing endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 21:41:42.326 +00:00 [INF] Setting HTTP status code 400.
+2025-01-27 21:41:42.328 +00:00 [INF] Executed endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 21:41:42.328 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/v1/employees - 400 null application/problem+json 17.1305ms
+2025-01-27 21:47:32.738 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 21:47:32.738 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 21:47:32.762 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:47:32.762 +00:00 [INF] CORS policy execution successful.
+2025-01-27 21:47:32.773 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:47:32.773 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 21:47:33.438 +00:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 21:47:33.462 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 21:47:33.667 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:47:33.670 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 21:47:33.672 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:47:33.672 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 21:47:33.674 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 21:47:33.674 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 21:47:33.675 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 939.9924ms
+2025-01-27 21:47:33.675 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 938.9135ms
+2025-01-27 22:17:32.017 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:17:32.017 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:17:32.076 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:17:32.076 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:17:32.084 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:17:32.085 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:17:32.475 +00:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:17:32.475 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:17:32.478 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:17:32.479 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:17:32.481 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:17:32.481 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:17:32.486 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:17:32.487 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 480.7178ms
+2025-01-27 22:17:32.486 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:17:32.488 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 481.8336ms
+2025-01-27 22:24:38.864 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:24:38.864 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:24:38.899 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:24:38.899 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:24:38.902 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:24:38.902 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:24:39.225 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:24:39.226 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:24:39.226 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:24:39.230 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:24:39.230 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 371.917ms
+2025-01-27 22:24:39.241 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:24:39.242 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:24:39.242 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:24:39.242 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:24:39.242 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 383.7643ms
+2025-01-27 22:25:13.861 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:25:13.861 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:25:13.872 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:25:13.872 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:25:13.872 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:25:13.873 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:25:13.906 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:25:13.906 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:25:13.907 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:25:13.907 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:25:13.907 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:25:13.907 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:25:13.908 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:25:13.908 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:25:13.908 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 48.0525ms
+2025-01-27 22:25:13.908 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 48.0594ms
+2025-01-27 22:35:33.948 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:35:33.948 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:35:34.002 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:35:34.002 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:35:34.008 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:35:34.008 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:35:34.443 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:35:34.444 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:35:34.446 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:35:34.451 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:35:34.457 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 509.7571ms
+2025-01-27 22:35:34.470 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:35:34.470 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:35:34.470 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:35:34.470 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:35:34.470 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 525.0426ms
+2025-01-27 22:40:57.862 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:40:57.862 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:40:57.931 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:40:57.931 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:40:57.934 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:40:57.934 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:40:57.983 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:40:57.983 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:40:57.984 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:40:57.985 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:40:57.985 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:40:57.985 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:40:57.987 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:40:57.987 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:40:57.988 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 126.3671ms
+2025-01-27 22:40:57.989 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 126.5574ms
+2025-01-27 22:43:00.895 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:43:00.895 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:43:00.916 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:43:00.918 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:43:00.920 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:43:00.920 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:43:00.951 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:43:00.953 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:43:00.954 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:43:00.954 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:43:00.955 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 60.3572ms
+2025-01-27 22:43:00.955 +00:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:43:00.958 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:43:00.959 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:43:00.961 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:43:00.961 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 66.9223ms
+2025-01-27 22:43:59.741 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:43:59.741 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:43:59.745 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:43:59.745 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:43:59.746 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:43:59.746 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:43:59.788 +00:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:43:59.788 +00:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:43:59.789 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:43:59.790 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:43:59.790 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:43:59.791 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:43:59.792 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:43:59.792 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 51.517ms
+2025-01-27 22:43:59.794 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:43:59.795 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 54.9693ms
+2025-01-27 22:46:59.451 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:46:59.458 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:46:59.460 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:46:59.483 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:46:59.485 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:46:59.485 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:46:59.486 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:46:59.486 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 36.1634ms
+2025-01-27 22:47:02.136 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:47:02.136 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:47:02.136 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:47:02.146 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:47:02.147 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:47:02.148 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:47:02.148 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:47:02.149 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 13.3324ms
+2025-01-27 22:47:04.676 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 22:47:04.682 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:47:04.683 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:47:04.707 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 22:47:04.708 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:47:04.708 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:47:04.709 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:47:04.709 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 32.5821ms
+2025-01-27 22:47:05.947 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 22:47:05.952 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:47:05.956 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:47:05.958 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:47:05.959 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:47:05.960 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:47:05.969 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 22:47:05.970 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:47:05.971 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:47:05.971 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:47:05.971 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 22:47:05.972 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 24.5754ms
+2025-01-27 22:47:05.972 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:47:05.973 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:47:05.974 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:47:05.974 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 15.4437ms
+2025-01-27 22:48:07.520 +00:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:48:07.525 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:48:07.528 +00:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:8080/api/v1/employees - 204 null null 9.5194ms
+2025-01-27 22:48:07.534 +00:00 [INF] Request starting HTTP/1.1 POST http://localhost:8080/api/v1/employees - application/json 133
+2025-01-27 22:48:07.537 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:48:07.538 +00:00 [INF] Executing endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 22:48:07.936 +00:00 [INF] Executed DbCommand (176ms) [Parameters=[@__roleIds_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName]
+FROM [Roles] AS [r]
+WHERE [r].[Id] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roleIds_0) WITH ([value] int '$') AS [r0]
+)
+2025-01-27 22:48:08.027 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__addEmployeeDto_EmployeeNumber_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[DateCreated], [e].[EmployeeNumber], [e].[FirstName], [e].[LastName], [e].[ManagerId]
+FROM [Employees] AS [e]
+WHERE [e].[EmployeeNumber] = @__addEmployeeDto_EmployeeNumber_0
+2025-01-27 22:48:08.041 +00:00 [INF] Executed DbCommand (4ms) [Parameters=[@__addEmployeeDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[DateCreated], [e].[EmployeeNumber], [e].[FirstName], [e].[LastName], [e].[ManagerId]
+FROM [Employees] AS [e]
+WHERE [e].[Id] = @__addEmployeeDto_ManagerId_0
+2025-01-27 22:48:08.594 +00:00 [INF] Executed DbCommand (317ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 7), @p3='?' (Size = 50), @p4='?' (Size = 50), @p5='?' (DbType = Guid), @p6='?' (DbType = Guid), @p7='?' (DbType = Int32), @p8='?' (DbType = Guid), @p9='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Employees] ([Id], [DateCreated], [EmployeeNumber], [FirstName], [LastName], [ManagerId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+INSERT INTO [EmployeeRole] ([EmployeeId], [RoleId])
+VALUES (@p6, @p7),
+(@p8, @p9);
+2025-01-27 22:48:08.615 +00:00 [INF] Setting HTTP status code 201.
+2025-01-27 22:48:08.630 +00:00 [INF] Writing value of type 'Result`1' as Json.
+2025-01-27 22:48:08.636 +00:00 [INF] Executed endpoint 'HTTP: POST api/v{version:apiVersion}/employees/'
+2025-01-27 22:48:08.636 +00:00 [INF] Request finished HTTP/1.1 POST http://localhost:8080/api/v1/employees - 201 null application/json; charset=utf-8 1101.9297ms
+2025-01-27 22:48:08.666 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:48:08.667 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:48:08.668 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:48:08.679 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:48:08.680 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:48:08.682 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:48:08.682 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:48:08.683 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 16.8405ms
+2025-01-27 22:48:18.066 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - null null
+2025-01-27 22:48:18.075 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:48:18.076 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:48:18.102 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 22:48:18.103 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:48:18.103 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:48:18.104 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:48:18.104 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=4194d025-729a-4f1e-aa8f-4997d81f6760 - 200 null application/json; charset=utf-8 38.9912ms
+2025-01-27 22:48:59.579 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=303d014e-440a-4e93-b853-45ec86220452 - null null
+2025-01-27 22:48:59.584 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:48:59.586 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:48:59.607 +00:00 [INF] Executed DbCommand (11ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 22:48:59.608 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:48:59.608 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:48:59.608 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:48:59.608 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=303d014e-440a-4e93-b853-45ec86220452 - 200 null application/json; charset=utf-8 30.2297ms
+2025-01-27 22:49:02.262 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=25b905cf-0e2e-4c87-adf0-08dd3f24ab43 - null null
+2025-01-27 22:49:02.264 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:49:02.264 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:49:02.289 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 22:49:02.290 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:49:02.290 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:49:02.290 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:49:02.291 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=25b905cf-0e2e-4c87-adf0-08dd3f24ab43 - 200 null application/json; charset=utf-8 28.9505ms
+2025-01-27 22:52:48.934 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:52:48.952 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:52:48.956 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:52:49.013 +00:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:52:49.015 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:52:49.015 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:52:49.016 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:52:49.016 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 84.6649ms
+2025-01-27 22:53:49.842 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 22:53:49.854 +00:00 [INF] CORS policy execution successful.
+2025-01-27 22:53:49.855 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:53:49.876 +00:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 22:53:49.877 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 22:53:49.877 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 22:53:49.880 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 22:53:49.881 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 39.6025ms
+2025-01-27 23:10:25.357 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:10:25.407 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:10:25.413 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:10:26.004 +00:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:10:26.006 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:10:26.007 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:10:26.011 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:10:26.012 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 659.1112ms
+2025-01-27 23:10:51.066 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:10:51.069 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:10:51.069 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:10:51.095 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:10:51.095 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:10:51.096 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:10:51.096 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:10:51.096 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 31.6077ms
+2025-01-27 23:14:55.174 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:14:55.189 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:14:55.193 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:14:55.217 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:14:55.218 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:14:55.218 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:14:55.219 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:14:55.219 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 45.0263ms
+2025-01-27 23:16:37.336 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:16:37.344 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:16:37.345 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:37.368 +00:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:16:37.369 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:16:37.369 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:16:37.370 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:37.370 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 34.8009ms
+2025-01-27 23:16:38.770 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:16:38.776 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:16:38.777 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:38.833 +00:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:16:38.834 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:16:38.834 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:16:38.834 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:38.834 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 63.6735ms
+2025-01-27 23:16:40.794 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=7f449b04-0cf6-4d50-c3c3-08dd3efaea01 - null null
+2025-01-27 23:16:40.802 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:16:40.807 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:40.845 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 23:16:40.845 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:16:40.846 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:16:40.847 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:40.847 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=7f449b04-0cf6-4d50-c3c3-08dd3efaea01 - 200 null application/json; charset=utf-8 53.0771ms
+2025-01-27 23:16:43.594 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 23:16:43.596 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:16:43.596 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:43.607 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 23:16:43.607 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:16:43.607 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:16:43.607 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:43.608 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 13.8815ms
+2025-01-27 23:16:48.298 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/roles - null null
+2025-01-27 23:16:48.299 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:16:48.311 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:16:48.311 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:16:48.313 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 23:16:48.315 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:48.340 +00:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:16:48.340 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:16:48.341 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:16:48.341 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:16:48.342 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 44.2905ms
+2025-01-27 23:16:48.513 +00:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleName] AS [Name]
+FROM [Roles] AS [r]
+2025-01-27 23:16:48.513 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:16:48.513 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:16:48.514 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
+2025-01-27 23:16:48.515 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 217.6409ms

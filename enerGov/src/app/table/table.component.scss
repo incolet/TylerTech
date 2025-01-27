@@ -1,0 +1,42 @@
+.table-container {
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures no gaps between borders */
+  border: 1px solid #ddd; /* Adds border to the entire table */
+}
+
+.employee-table th,
+.employee-table td {
+  border: 1px solid #000; /* Adds borders to rows and columns */
+  padding: 8px;
+}
+
+.employee-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.employee-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Slight background for even rows */
+}
+
+.employee-table tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.employee-table th,
+.employee-table td {
+  text-align: left; /* Align content to the left */
+}
+
+.no-records {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}

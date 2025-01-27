@@ -1,0 +1,43 @@
+﻿services:
+  api:
+    image: tylertechnologies
+    build:
+      context: .
+      dockerfile: TylerTechnologies.Api/Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      sql-server:
+        condition: service_started
+    environment:
+        ConnectionStrings__DefaultConnection: "Server=sql_server_container;Database=tylerdb;User=sa;Password=DMWZgnPIw4ekq0ki90I9;Encrypt=False;TrustServerCertificate=True;"
+    networks:
+        - tyler-network
+        
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server_container
+    platform: linux/amd64
+    ports:
+      - "14333:1433"
+    environment:
+        SA_PASSWORD: "DMWZgnPIw4ekq0ki90I9"
+        ACCEPT_EULA: "Y"
+    networks:
+        - tyler-network
+          
+  client:
+    container_name: enerGovUI
+    build:
+      context: ../enerGov
+      dockerfile: Dockerfile
+    ports:
+      - "4200:801"
+    depends_on:
+      - api 
+    networks:
+      - tyler-network
+        
+networks:
+    tyler-network:
+      driver: bridge

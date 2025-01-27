@@ -1,0 +1,324 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologiesTest/TylerTechnologiesTest.csproj": {}
+  },
+  "projects": {
+    "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api/TylerTechnologies.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api/TylerTechnologies.Api.csproj",
+        "projectName": "TylerTechnologies.Api",
+        "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api/TylerTechnologies.Api.csproj",
+        "packagesPath": "/Users/incolet/.nuget/packages/",
+        "outputPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/incolet/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Infrastructure/TylerTechnologies.Infrastructure.csproj": {
+                "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Infrastructure/TylerTechnologies.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Asp.Versioning.Http": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Asp.Versioning.Mvc.ApiExplorer": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj",
+        "projectName": "TylerTechnologies.Core",
+        "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj",
+        "packagesPath": "/Users/incolet/.nuget/packages/",
+        "outputPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/incolet/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Infrastructure/TylerTechnologies.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Infrastructure/TylerTechnologies.Infrastructure.csproj",
+        "projectName": "TylerTechnologies.Infrastructure",
+        "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Infrastructure/TylerTechnologies.Infrastructure.csproj",
+        "packagesPath": "/Users/incolet/.nuget/packages/",
+        "outputPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/incolet/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj": {
+                "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologiesTest/TylerTechnologiesTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologiesTest/TylerTechnologiesTest.csproj",
+        "projectName": "TylerTechnologiesTest",
+        "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologiesTest/TylerTechnologiesTest.csproj",
+        "packagesPath": "/Users/incolet/.nuget/packages/",
+        "outputPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologiesTest/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/incolet/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api/TylerTechnologies.Api.csproj": {
+                "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Api/TylerTechnologies.Api.csproj"
+              },
+              "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj": {
+                "projectPath": "/Users/incolet/Documents/Projects/Tyler/TylerTechnologies/TylerTechnologies.Core/TylerTechnologies.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.11.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<div class="add-employer-container">
+  <h1>Add New Employee</h1>
+  <form (ngSubmit)="onSubmit()">
+    <!-- API Error Message -->
+    <div class="api-error" *ngIf="apiError">
+      {{ apiError }}
+    </div>
+
+    <!-- Manager Dropdown -->
+    <div class="dropdown-cont">
+      <label for="manager">Manager</label>
+      <app-dropdown 
+        [items]="employeesList" 
+        (selectedItem)="handleSelectedItem($event); validateField('managerId')"
+      />
+      <div class="error-message" *ngIf="validationErrors.managerId && isSubmitted">
+        * Manager selection is required
+      </div>
+    </div>
+
+    <div>
+      <label for="employerId">Employer ID</label>
+      <input 
+        type="text" 
+        id="employerId" 
+        name="employerId" 
+        [(ngModel)]="newEmployee.employeeNumber" 
+        (input)="onEmployeeNumberInput($event); validateField('employeeNumber')"
+        [class.invalid]="validationErrors.employeeNumber && isSubmitted"
+        maxlength="7"
+        placeholder="AA12345">
+      <div class="error-message" *ngIf="validationErrors.employeeNumber && isSubmitted">
+        * Must be in format AA12345 (2 letters followed by 5 numbers)
+      </div>
+    </div>
+
+    <!-- First Name -->
+    <div>
+      <label for="firstName">First Name:</label>
+      <input 
+        type="text" 
+        id="firstName" 
+        name="firstName"  
+        [(ngModel)]="newEmployee.firstName"
+        (input)="validateField('firstName')"
+        [class.invalid]="validationErrors.firstName && isSubmitted"
+        maxlength="50">
+      <div class="error-message" *ngIf="validationErrors.firstName && isSubmitted">
+        * Required, max 50 characters
+      </div>
+    </div>
+
+    <!-- Last Name -->
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input 
+        type="text" 
+        id="lastName" 
+        name="lastName" 
+        [(ngModel)]="newEmployee.lastName"
+        (input)="validateField('lastName')"
+        [class.invalid]="validationErrors.lastName && isSubmitted"
+        maxlength="50">
+      <div class="error-message" *ngIf="validationErrors.lastName && isSubmitted">
+        * Required, max 50 characters
+      </div>
+    </div>
+
+    <!-- Roles Checkbox List -->
+    <div class="check-list-cont">
+      <app-checkbox-list 
+        [items]="roleList" 
+        (selectedItems)="handleSelectedRoleList($event); validateField('roles')"
+      />
+      <div class="error-message" *ngIf="validationErrors.roles && isSubmitted">
+        * At least one role must be selected
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="btn-cont">
+      <button type="submit">Submit</button>
+      <button type="button" (click)="goToHome()">Back</button>
+    </div>
+  </form>
+</div>
