@@ -1117,3 +1117,24 @@ FROM [Roles] AS [r]
 2025-01-27 23:16:48.513 +00:00 [INF] Writing value of type 'List`1' as Json.
 2025-01-27 23:16:48.514 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/roles'
 2025-01-27 23:16:48.515 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/roles - 200 null application/json; charset=utf-8 217.6409ms
+2025-01-27 23:36:59.113 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees - null null
+2025-01-27 23:36:59.157 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:36:59.171 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:36:59.866 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+2025-01-27 23:36:59.871 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:36:59.873 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:36:59.889 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:36:59.897 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees - 200 null application/json; charset=utf-8 784.3717ms
+2025-01-27 23:37:01.685 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - null null
+2025-01-27 23:37:01.694 +00:00 [INF] CORS policy execution successful.
+2025-01-27 23:37:01.695 +00:00 [INF] Executing endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:37:01.724 +00:00 [INF] Executed DbCommand (14ms) [Parameters=[@__employeeQueryDto_ManagerId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[LastName], [e].[FirstName], [e].[EmployeeNumber]
+FROM [Employees] AS [e]
+WHERE [e].[ManagerId] = @__employeeQueryDto_ManagerId_0
+2025-01-27 23:37:01.724 +00:00 [INF] Setting HTTP status code 200.
+2025-01-27 23:37:01.725 +00:00 [INF] Writing value of type 'List`1' as Json.
+2025-01-27 23:37:01.725 +00:00 [INF] Executed endpoint 'HTTP: GET api/v{version:apiVersion}/employees'
+2025-01-27 23:37:01.725 +00:00 [INF] Request finished HTTP/1.1 GET http://localhost:8080/api/v1/employees?managerId=22a0a94d-58eb-487c-9cd2-702b485fa8c7 - 200 null application/json; charset=utf-8 40.3591ms

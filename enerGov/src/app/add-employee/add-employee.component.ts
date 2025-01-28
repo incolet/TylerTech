@@ -176,17 +176,18 @@ onEmployeeNumberInput(event: Event): void {
 
 private handleApiError(err: any): void {
   console.error('Error creating employee:', err);
-  this.apiError = err.error?.message || 'An unexpected error occurred';
+  this.apiError = err.error?.title || 'An unexpected error occurred';
 
-  if (err.status === 400 && err.error?.errors) {
-    const apiErrors = err.error.errors;
-    
-    if (apiErrors.employeeNumber) {
-      this.validationErrors.employeeNumber = true;
-      this.apiError += `: ${apiErrors.employeeNumber}`;
+    if (err.status === 400 && err.error?.errors) {
+      const apiErrors = err.error.errors;
+      
+      Object.keys(apiErrors).forEach(field => {
+        const messages = apiErrors[field].join(', ');
+        this.apiError = `\n• ${field}: ${messages}`;
+      });
     }
     
-  }
+  
 }
 
 private resetForm() {
